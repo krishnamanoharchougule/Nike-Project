@@ -1,0 +1,300 @@
+
+@font-face {
+    font-family: 'NIKE';
+    src: url('fonts/NIKE/SFT-Ritam-Sans-TRIAL-DemiBold-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'buttons';
+    src: url('fonts/Buttons/helvetica-neue-5/HelveticaNeueMedium.otf') format('OpenType');
+}
+@font-face {
+    font-family: 'headings';
+    src: url('fonts/NIKE/SFT-Ritam-Sans-TRIAL-DemiBold.ttf') format('truetype');
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
+    
+    height: 100vh;
+    overflow-y: auto;
+    width: 100%;
+    position: relative;
+}
+
+/* Background Image */
+.bg img {
+    width: 950px;
+    height: 650px;
+    opacity: 50%;
+    position: relative;
+    bottom: 75px;
+    left:210px;
+}
+
+/* Logo */
+.Logo img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* NIKE Logo Name */
+.Logo_name {
+    font-family: 'NIKE';
+    text-align: center;
+    font-size: 350px;
+    color: #ffffff;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/* Dropdown Wrapper */
+.dropdn {
+    position: relative; /* Ensures dropdown positions relative to the button */
+    display: inline-block;
+    
+}
+
+/* Style for buttons */
+.Icons, .Shoes, .Clothing, .Help {
+    font-family: 'buttons';
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    z-index: 10;
+}
+
+/* Button Positions */
+.Icons { top: 30px; left: 60px; }
+.Shoes { top: 30px; left: 300px; }
+.Clothing { top: 30px; left: 900px; }
+.Help { top: 30px; left: 1200px; }
+
+/* Dropdown Content */
+.content_Icons, .content_Shoes, .content_Clothing, .content_Help {
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    top: 100%; /* Places dropdown right below button */
+    left: 0; /* Aligns dropdown to left of button */
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.content_Icons { top: 75px; left: 15px; }
+.content_Shoes { top: 75px; left: 265px; }
+.content_Clothing { top: 75px; left: 875px; }
+.content_Help { top: 75px; left: 1150px; }
+
+
+/* Dropdown Links */
+.content_Icons a, .content_Shoes a, .content_Clothing a, .content_Help a {
+    font-family: 'buttons';
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition:  0.3s ease-in-out;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(1px);
+
+    
+}
+
+/* Hover Effect */
+.dropdn:hover .content_Icons,
+.dropdn:hover .content_Shoes,
+.dropdn:hover .content_Clothing,
+.dropdn:hover .content_Help {
+    display: block;
+}
+
+.tagline p,.sport_shop p{
+    font-family: "buttons";
+    color: #ffffff;
+}
+.tagline p{
+    position: relative;
+    text-align: center;
+    bottom:135px;
+    font-size: 30px;
+}
+.sport_shop p{
+    font-family: "headings";
+    position: absolute;
+    text-decoration:under;
+    left:370px;
+    top:560px;
+    font-size: 100px;
+}
+.basketball img{
+    position: absolute;
+    top:1460px;
+    height:900px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.basketball p:nth-of-type(1) {
+    position: absolute;
+    top:670px;
+    color: white;
+    font-family: "headings";
+    font-size: 200px;    
+}
+
+.basketball p:nth-of-type(2) {
+    position: absolute;
+    top:1200px;
+    left:530px;
+    color: white;
+    font-family: "buttons";
+    font-size: 70px;    
+}
+.shop_now,.shop_nowf,.shop_nowr{
+    font-family: "buttons";
+    background-color: black; /* Button background */
+    color: white; /* Button text */
+    font-size: 20px;
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+     z-index: 3 ;
+}
+
+/* Ensure the link inside the button looks correct */
+.shop_now a,.shop_nowf a,.shop_nowr a{
+    text-decoration: none;
+    color: inherit; /* Inherit white color */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hover effect */
+.shop_now:hover,.shop_nowf:hover,.shop_nowr:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+.shop_now{
+    position: absolute;
+    top:1400px;
+    left:530px;
+}
+.football img{
+    position: absolute;
+    top:2600px;
+    left:120px;
+    height:900px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.football p:nth-of-type(1) {
+    position: absolute;
+    top:1700px;
+    color: white;
+    font-family: "headings";
+    font-size: 250px;    
+}
+.football p:nth-of-type(2) {
+    position: absolute;
+    top:2400px;
+    left:530px;
+    color: white;
+    font-family: "buttons";
+    font-size: 70px;    
+}
+.shop_nowf{
+    position: absolute;
+    top:2750px;
+    left:1090px;
+}
+.running img{
+    position: absolute;
+    top:3700px;
+    left:500px;
+    height:900px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.running p:nth-of-type(1) {
+    position: absolute;
+    top:2850px;
+    color: white;
+    font-family: "headings";
+    font-size: 250px;    
+}
+.running p:nth-of-type(2) {
+    position: absolute;
+    top:3500px;
+    left:530px;
+    color: white;
+    font-family: "buttons";
+    font-size: 70px;    
+}
+.shop_nowr{
+    position: absolute;
+    top:3750px;
+    left:1090px;
+}
+
+/* Menu Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    background: #000000;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Position the menu at the bottom of the webpage */
+nav {
+    width: 100%;
+    background: #000000;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    top:4200px;
+}
+
+li {
+    padding: 10px 15px;
+}
+
+a {
+    font-family: "buttons";
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
